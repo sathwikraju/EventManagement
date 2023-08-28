@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class EmployeeDetailsComponent {
   employee: any;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private employeeService: EmployeeService
   ) {}
 
@@ -31,5 +32,20 @@ export class EmployeeDetailsComponent {
         console.error('Error fetching employee details', error);
       }
     );
+  }
+
+  deleteEmployee(id: number): void {
+    if (confirm('Are you sure you want to delete this employee?')) {
+      this.employeeService.deleteEmployee(id).subscribe(
+        (response) => {
+          console.log('Employee deleted successfully', response);
+          // Navigate back to the view employees page after deletion
+          this.router.navigate(['/view-employees']);
+        },
+        (error) => {
+          console.error('Error deleting employee', error);
+        }
+      );
+    }
   }
 }

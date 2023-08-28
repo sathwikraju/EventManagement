@@ -22,4 +22,9 @@ export class EmployeeService {
     const url = `${this.apiUrl}/employees/${id}`;
     return this.http.get(url);
   }
+
+  deleteEmployee(id: number): Observable<any> {
+    const url = `${this.apiUrl}/employees/${id}`;
+    return this.http.delete(url);
+  }
 }

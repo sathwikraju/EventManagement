@@ -6,7 +6,16 @@
     <p><strong>Last Name:</strong> {{ employee.last_name }}</p>
     <p><strong>Email:</strong> {{ employee.email }}</p>
   </div>
-  <a routerLink="/view-employees" class="btn btn-primary mb-2"
-    >View Employees</a
-  >
+
+  <div *ngIf="employee">
+    <a routerLink="/view-employees" class="btn btn-primary mb-2"
+      >View Employees</a
+    >
+    <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">
+      Delete
+    </button>
+    <a [routerLink]="['/update-employee', employee.id]" class="btn btn-warning">
+      Update
+    </a>
+  </div>
 </div>
