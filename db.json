@@ -13,16 +13,10 @@
       "email": "steve@codingthesmartway.com"
     },
     {
-      "id": 3,
-      "first_name": "Ann",
-      "last_name": "Smith",
-      "email": "ann@codingthesmartway.com"
-    },
-    {
-      "first_name": "sathwik",
-      "last_name": "kollam",
-      "email": "bunnynicperson@gmail.com",
-      "id": 4
+      "first_name": "abhishek",
+      "last_name": "billa",
+      "email": "abhishek@user.com",
+      "id": 3
     }
   ]
 }
