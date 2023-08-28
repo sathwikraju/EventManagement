@@ -7,7 +7,7 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./add-employee.component.css'],
 })
 export class AddEmployeeComponent {
-  newEmployee = { name: '', position: '' };
+  newEmployee = { first_name: '', last_name: '', email: '' };
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -16,7 +16,7 @@ export class AddEmployeeComponent {
       (response) => {
         console.log('Employee added successfully', response);
         // Clear the form fields after adding an employee
-        this.newEmployee = { name: '', position: '' };
+        this.newEmployee = { first_name: '', last_name: '', email: '' };
       },
       (error) => {
         console.error('Error adding employee', error);

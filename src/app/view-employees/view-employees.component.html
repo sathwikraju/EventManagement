@@ -1,17 +1,22 @@
 <div class="container">
   <h2>View Employees</h2>
   <a routerLink="/add-employee" class="btn btn-primary mb-2">Add Employee</a>
+
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Position</th>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let employee of employees">
-        <td>{{ employee.name }}</td>
-        <td>{{ employee.position }}</td>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.first_name }}</td>
+        <td>{{ employee.last_name }}</td>
+        <td>{{ employee.email }}</td>
       </tr>
     </tbody>
   </table>
