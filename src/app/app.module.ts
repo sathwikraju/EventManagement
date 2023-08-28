@@ -9,9 +9,11 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeesComponent } from './view-employees/view-employees.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, AddEmployeeComponent, ViewEmployeesComponent, EmployeeDetailsComponent, UpdateEmployeeComponent],
+  declarations: [AppComponent, AddEmployeeComponent, ViewEmployeesComponent, EmployeeDetailsComponent, UpdateEmployeeComponent, LoginComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
