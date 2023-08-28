@@ -17,6 +17,14 @@
         <td>{{ employee.first_name }}</td>
         <td>{{ employee.last_name }}</td>
         <td>{{ employee.email }}</td>
+        <td>
+          <a
+            [routerLink]="['/employee-details', employee.id]"
+            class="btn btn-sm btn-info"
+          >
+            View Details
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

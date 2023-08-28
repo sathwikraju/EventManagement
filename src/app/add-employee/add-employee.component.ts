@@ -17,6 +17,9 @@ export class AddEmployeeComponent {
         console.log('Employee added successfully', response);
         // Clear the form fields after adding an employee
         this.newEmployee = { first_name: '', last_name: '', email: '' };
+
+        //alert for successful addition
+        alert('Employee added successfully');
       },
       (error) => {
         console.error('Error adding employee', error);
