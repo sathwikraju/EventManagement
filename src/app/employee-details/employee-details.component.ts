@@ -40,7 +40,7 @@ export class EmployeeDetailsComponent {
         (response) => {
           console.log('Employee deleted successfully', response);
           // Navigate back to the view employees page after deletion
-          this.router.navigate(['/view-employees']);
+          this.router.navigate(['/dashboard/employees']);
         },
         (error) => {
           console.error('Error deleting employee', error);

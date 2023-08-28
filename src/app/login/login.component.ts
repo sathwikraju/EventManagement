@@ -18,17 +18,13 @@ export class LoginComponent {
     // Call the authentication service to check user credentials
     this.authService.authenticate(this.username, this.password).subscribe(
       (user: any) => {
-        // Assuming your JSON data has a list of users
         const authenticatedUser = user.find(
           (u: any) =>
             u.username === this.username && u.password === this.password
         );
 
         if (authenticatedUser) {
-          // Set user authentication status
           this.authService.setAuthenticated(true);
-
-          // Navigate to the dashboard or desired route
           this.router.navigate(['/dashboard']);
         } else {
           console.log('Authentication failed.');

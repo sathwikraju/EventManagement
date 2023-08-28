@@ -49,7 +49,10 @@ export class UpdateEmployeeComponent {
         (response) => {
           console.log('Employee updated successfully', response);
           // Navigate back to the employee details page after update
-          this.router.navigate(['/employee-details', this.employeeId]);
+          this.router.navigate([
+            '/dashboard/employee-details',
+            this.employeeId,
+          ]);
         },
         (error) => {
           console.error('Error updating employee', error);

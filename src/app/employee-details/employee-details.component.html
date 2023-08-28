@@ -8,13 +8,16 @@
   </div>
 
   <div *ngIf="employee">
-    <a routerLink="/view-employees" class="btn btn-primary mb"
+    <a routerLink="/dashboard/employees" class="btn btn-primary mb"
       >View Employees</a
     >
     <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">
       Delete
     </button>
-    <a [routerLink]="['/update-employee', employee.id]" class="btn btn-warning">
+    <a
+      [routerLink]="['/dashboard/update-employee', employee.id]"
+      class="btn btn-warning"
+    >
       Update
     </a>
   </div>

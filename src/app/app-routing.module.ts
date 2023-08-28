@@ -5,14 +5,24 @@ import { ViewEmployeesComponent } from './view-employees/view-employees.componen
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'view-employees', component: ViewEmployeesComponent },
-  { path: 'add-employee', component: AddEmployeeComponent },
-  { path: 'employee-details/:id', component: EmployeeDetailsComponent },
-  { path: 'update-employee/:id', component: UpdateEmployeeComponent },
-  { path: '**', redirectTo: '' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'home' },
+      { path: 'home', component: HomeComponent },
+      { path: 'employees', component: ViewEmployeesComponent },
+      { path: 'add-employee', component: AddEmployeeComponent },
+      { path: 'employee-details/:id', component: EmployeeDetailsComponent },
+      { path: 'update-employee/:id', component: UpdateEmployeeComponent },
+    ],
+  },
 ];
 
 @NgModule({

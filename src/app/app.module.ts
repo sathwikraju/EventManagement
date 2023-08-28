@@ -11,9 +11,10 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, AddEmployeeComponent, ViewEmployeesComponent, EmployeeDetailsComponent, UpdateEmployeeComponent, LoginComponent, DashboardComponent],
+  declarations: [AppComponent, AddEmployeeComponent, ViewEmployeesComponent, EmployeeDetailsComponent, UpdateEmployeeComponent, LoginComponent, DashboardComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,6 +1,8 @@
 <div class="container">
   <h2>View Employees</h2>
-  <a routerLink="/add-employee" class="btn btn-primary mb-2">Add Employee</a>
+  <a [routerLink]="['/dashboard/add-employee']" class="btn btn-primary mb-2"
+    >Add Employee</a
+  >
 
   <table class="table table-striped">
     <thead>
@@ -19,7 +21,7 @@
         <td>{{ employee.email }}</td>
         <td>
           <a
-            [routerLink]="['/employee-details', employee.id]"
+            [routerLink]="['/dashboard/employee-details', employee.id]"
             class="btn btn-sm btn-info"
           >
             View Details

@@ -8,6 +8,7 @@ import { EmployeeService } from '../employee.service';
 })
 export class AddEmployeeComponent {
   newEmployee = { first_name: '', last_name: '', email: '' };
+  message: string = '';
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -19,7 +20,8 @@ export class AddEmployeeComponent {
         this.newEmployee = { first_name: '', last_name: '', email: '' };
 
         //alert for successful addition
-        alert('Employee added successfully');
+        this.message = 'Employee added successfully';
+        // alert('Employee added successfully');
       },
       (error) => {
         console.error('Error adding employee', error);
