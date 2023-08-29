@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
   username: string = '';
   password: string = '';
+  errorMessageType: string = '';
   errorMessage: string = '';
   authenticatedUsername: string = '';
 
@@ -25,11 +26,13 @@ export class LoginComponent {
         );
 
         if (authenticatedUser) {
+          this.errorMessageType = 'success';
+          this.errorMessage = 'Successful login';
           this.authService.setAuthenticated(true);
 
           this.authService.setAuthenticatedUsername(this.username);
         } else {
-          console.log('Authentication failed.');
+          this.errorMessageType = 'error';
           this.errorMessage = 'Invalid username or password';
         }
       },

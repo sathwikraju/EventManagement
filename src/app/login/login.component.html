@@ -27,7 +27,14 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
       </form>
-      <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+      <div
+        *ngIf="errorMessage"
+        [class]="
+          errorMessageType === 'error'
+            ? 'alert alert-danger'
+            : 'alert alert-success'
+        "
+      >
         {{ errorMessage }}
       </div>
       <div *ngIf="authService.isAuthenticated()" class="text-center">
