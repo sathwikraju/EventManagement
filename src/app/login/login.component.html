@@ -30,6 +30,15 @@
       <div *ngIf="errorMessage" class="alert alert-danger mt-2">
         {{ errorMessage }}
       </div>
+      <div *ngIf="authService.isAuthenticated()" class="text-center">
+        <h2>Welcome, {{ authenticatedUsername }}</h2>
+        <button class="btn btn-primary" (click)="changePassword()">
+          Change Password
+        </button>
+        <button class="btn btn-success" (click)="proceedToDashboard()">
+          Proceed to Dashboard
+        </button>
+      </div>
     </div>
   </div>
 </div>

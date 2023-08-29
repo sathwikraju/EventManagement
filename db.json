@@ -3,7 +3,7 @@
     {
       "first_name": "sathwik",
       "last_name": "kollam",
-      "email": "bunnynicperson@gmail.com",
+      "email": "abhishek@user.com",
       "id": 1
     },
     {
@@ -11,6 +11,12 @@
       "last_name": "billa",
       "email": "abhishek@user.com",
       "id": 2
+    },
+    {
+      "first_name": "Rajesh",
+      "last_name": "Palagummi",
+      "email": "rajesh@user.com",
+      "id": 3
     }
   ]
 }

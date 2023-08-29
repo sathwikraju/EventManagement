@@ -11,8 +11,9 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
+  authenticatedUsername: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(public authService: AuthService, private router: Router) {}
 
   login(): void {
     // Call the authentication service to check user credentials
@@ -25,7 +26,8 @@ export class LoginComponent {
 
         if (authenticatedUser) {
           this.authService.setAuthenticated(true);
-          this.router.navigate(['/dashboard']);
+
+          this.authService.setAuthenticatedUsername(this.username);
         } else {
           console.log('Authentication failed.');
           this.errorMessage = 'Invalid username or password';
@@ -35,5 +37,13 @@ export class LoginComponent {
         console.error('Error authenticating user', error);
       }
     );
+  }
+
+  proceedToDashboard(): void {
+    this.router.navigate(['/dashboard']);
+  }
+
+  changePassword(): void {
+    this.router.navigate(['/profile']);
   }
 }

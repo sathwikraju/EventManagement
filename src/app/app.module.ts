@@ -12,9 +12,20 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, AddEmployeeComponent, ViewEmployeesComponent, EmployeeDetailsComponent, UpdateEmployeeComponent, LoginComponent, DashboardComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    AddEmployeeComponent,
+    ViewEmployeesComponent,
+    EmployeeDetailsComponent,
+    UpdateEmployeeComponent,
+    LoginComponent,
+    DashboardComponent,
+    HomeComponent,
+    ProfileComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

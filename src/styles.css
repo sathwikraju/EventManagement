@@ -9,6 +9,11 @@ input {
   padding: 50px;
 }
 
-button {
-  margin-top: 10px;
+.btn {
+  margin-top: 20px;
+}
+
+.container {
+  margin: 30px 100px;
+  padding: 50px;
 }
