@@ -30,12 +30,14 @@ Before you begin, ensure you have the following installed:
 3. **Start Angular App**:
 
    Open terminal window and run the Angular app:
-
+   
    ```bash
    npm start
    ```
 
-4. **Open in Browser**:
+   This will start both json servers at different ports i.e admins and employees json files.
+
+5. **Open in Browser**:
 
    Open your web browser and navigate to http://localhost:4200 to access the app.
 
