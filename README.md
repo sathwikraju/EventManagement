@@ -1,27 +1,54 @@
-# EventManagement
+# Event Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Welcome to the Event Management App! This application allows administrators to view, add, update, and delete employee details in a user-friendly interface.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before you begin, ensure you have the following installed:
 
-## Code scaffolding
+- Node.js and npm (Node Package Manager)
+- Angular CLI
+- JSON Server (for local development)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+1. **Clone the repository**:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```bash
+   git clone https://github.com/your-username/event-management-app.git
+   cd EventManagement
+   ```
 
-## Running unit tests
+2. **Install Dependencies**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   Navigate to the project directory and install the required dependencies:
 
-## Running end-to-end tests
+   ```bash
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Start Angular App**:
 
-## Further help
+   Open terminal window and run the Angular app:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   npm start
+   ```
+
+4. **Open in Browser**:
+
+   Open your web browser and navigate to http://localhost:4200 to access the app.
+
+## Default Login Credentials
+
+To access the app, use the following login credentials:
+
+- Username: admin
+- Password: admin123
+
+## Features
+
+- Admin can log in to the application using their username and password.
+- Admin can view the list of employees and their details.
+- Admin can add, update, and delete employee details.
+- Admin can change their password from the dashboard.
