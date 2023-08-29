@@ -12,7 +12,9 @@ export class ProfileComponent {
   newPassword: string = '';
   authenticatedUsername: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {
+    this.authenticatedUsername = authService.getAuthenticatedUsername();
+  }
 
   changePassword(): void {
     const authenticatedUsername = this.authService.getAuthenticatedUsername();
